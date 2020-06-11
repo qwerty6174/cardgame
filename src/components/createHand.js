@@ -10,8 +10,6 @@ function createHand(){
         hand.push(deck[index])
         deck.splice(index,1)
     }
-    console.log(deck)
-    console.log(hand)
     return hand
 }
 
