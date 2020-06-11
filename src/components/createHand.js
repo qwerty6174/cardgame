@@ -8,7 +8,9 @@ function createHand(){
     for(let i=0;i<=6;i++){
         let index = Math.floor(Math.random() * Math.floor(36));
         hand.push(deck[index])
+        deck.splice(index,1)
     }
+    console.log(deck)
     console.log(hand)
     return hand
 }
