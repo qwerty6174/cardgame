@@ -3,13 +3,13 @@ import createDeck from './cardDeck'
 
 
 function createHand(){
-    let deck = createDeck
+    let deck = createDeck()
     let hand = []
     for(let i=0;i<=6;i++){
-        let index = Math.random(36)
+        let index = Math.floor(Math.random() * Math.floor(36));
         hand.push(deck[index])
-        console.log(hand)
     }
+    console.log(hand)
     return hand
 }
 
