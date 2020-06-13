@@ -3,13 +3,14 @@ import CreateHand from './createHand'
 
 let playerHands=[]
 
-function PlayGround(props){
+function createHands(props, deck){
     for(let i=0;i<=props-1;i++){
-        let temp = CreateHand()
+        let temp = CreateHand(deck)
         playerHands.push(temp)
+        console.log(playerHands)
     }
     return playerHands
 }
 
-export default PlayGround
+export default createHands
 

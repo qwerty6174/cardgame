@@ -1,8 +1,9 @@
 import React from 'react'
-import CreateDeck from './cardDeck'
+import CreateDeck from './createDeck'
 
 var handnumber = []
 let deck = CreateDeck()
+
 export default function createHand(){
     let hand = []
         while(handnumber.length<4){

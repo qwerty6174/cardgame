@@ -1,0 +1,36 @@
+.playerHands0{
+    padding-top: 10px;
+    top: 0;
+    position: absolute;
+    margin-top: 20px;
+    left:40%;
+    right: 40%;
+}
+.playerHands1{
+    padding-top: 10px;
+    bottom: 0;
+    position: absolute;
+    align-items: center;
+    left: 40%;
+    right: 40%;
+    margin-bottom: 20px;
+}
+.cardGround{
+    position: relative;
+}
+button{
+    border-radius: 10px;
+    border:1px solid black;
+}
+button:hover{
+    background-color: aqua;
+}
+img{
+    width: 72px;
+    height: 96px;
+    border: 1px solid black;
+}
+img:hover{
+    width: 82px;
+    height: 106px;
+}
