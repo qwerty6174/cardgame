@@ -1,16 +1,18 @@
 import React from 'react'
-import createDeck from './cardDeck'
+import CreateDeck from './cardDeck'
 
-
-function createHand(){
-    let deck = createDeck()
+var handnumber = []
+let deck = CreateDeck()
+export default function createHand(){
     let hand = []
-    for(let i=0;i<=6;i++){
-        let index = Math.floor(Math.random() * Math.floor(36));
-        hand.push(deck[index])
-        deck.splice(index,1)
+        while(handnumber.length<4){
+            let index = Math.floor(Math.random() * Math.floor(36));
+            if (handnumber.indexOf(index)===-1){
+            handnumber[handnumber.length]=index}
+        }
+    for(let i=0;i<4;i++){
+        hand.push(deck[handnumber[i]])
+        deck.splice(handnumber[i],1)
     }
-    return hand
+    return  hand
 }
-
-export default createHand

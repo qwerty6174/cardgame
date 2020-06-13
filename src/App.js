@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import createHand from './components/createHand';
+import playGround from './components/playGround' 
+import Status from './components/Status'
 
 function App() {
-  createHand()
+  playGround(2)
   return (
     <div className="App">
+      <Status/>
     </div>
   );
 }
