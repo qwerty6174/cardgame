@@ -7,15 +7,17 @@ const hands = PlayGround()
 function Status(){
     if(hands){
     return(
-        <div>
-            <p>В первой руке {hands[0].length} карт</p>
-            {hands.map(item=>{
-                return (<div className='playerHands'><CardShirt array = {item} key={Math.random()}/>
-                    </div>)
-            })}
-        </div>
-
-        )
+            <div>
+                <p>В первой руке {hands[0].length} карт</p>
+                {hands.map(item=>{
+                    return (
+                            <div className='playerHands'>
+                                <CardShirt array = {item} key={Math.random()}/>
+                            </div>
+                            )
+                })}
+            </div>
+         )
     }
 }
     export default Status
