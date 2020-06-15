@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import MakeTurn from '../logiсs/makeTurn'
+import Context from '../logiсs/context'
 import '../styles.css'
 
 
 function CardShirt({array}){
+    const {removeCard} = useContext
+    console.log(array)
     let src = []
     array.forEach(element => {
         let temp = "bmp/"+element.rang+"_"+element.suit+".bmp"
@@ -13,8 +16,7 @@ function CardShirt({array}){
     return(
         <div>
             {src.map((item,idx)=>{
-                console.log('ok!')
-                return  <img src={item} alt='' key={idx} onClick={function(){MakeTurn(array, idx)}}></img>
+                return  <img src={item} alt='' key={idx} onClick={()=>MakeTurn(array, idx)}></img>
             })}
         </div>
     )

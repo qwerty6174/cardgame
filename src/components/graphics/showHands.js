@@ -1,21 +1,21 @@
 import React from 'react'
-import createHands from '../logiсs/createHands'
 import CardShirt from './CardShirt'
 import YourTurn from '../logiсs/YourTurn'
 import '../styles.css'
 
-const hands = createHands()
 
-function Status(){
+
+function Status({hands}){
     if(hands){
     return(
             <div>
                 {hands.map((item,idx)=>{
+                    console.log(item)
                     let className="playerHands"+idx
                     return (
                             <div className={className}>
                                 <CardShirt array = {item} key={idx}/>
-                                <button onClick={YourTurn}>Конец хода</button>
+                                <button onClick={()=>YourTurn}>Конец хода</button>
                             </div>
                             )
                 })}
